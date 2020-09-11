@@ -56,10 +56,12 @@ while idx < maxpos:
             s = serial_proposal.getText().lower().split(' ')
             if s[0] == 'от':
                 jobs.loc[idx_pos, 'proposal_min'] = s[1]
+
                 jobs.loc[idx_pos, 'proposal_currency'] = s[2].replace(f'\xa0', f'')
             elif s[0] == 'до':
                 jobs.loc[idx_pos, 'proposal_max'] = s[1]
                 jobs.loc[idx_pos, 'proposal_currency'] = s[2].replace(f'\xa0', f'')
+
             else:
                 jobs.loc[idx_pos, 'proposal_min'], jobs.loc[idx_pos, 'proposal_max'] = s[0].replace(f'\xa0', f'').split('-')
                 jobs.loc[idx_pos, 'proposal_currency'] = s[1]
