@@ -57,27 +57,31 @@ while idx < maxpos:
         serial_data = {}
 
         serial_info = serial.find('a', {'class':'icMQ_'})
-        jobs.loc[idx_pos, 'link'] = serial_info['href']
-        jobs.loc[idx_pos, 'name'] = serial_info.getText()
-        jobs.loc[idx_pos, 'main_link'] = main_link
+        jobs.loc[idx_pos, 'link'] = main_link + str(serial_info['href'])
+        jobs.loc[idx_pos, 'name'] = str(serial_info.getText())
+        jobs.loc[idx_pos, 'main_link'] = str(main_link)
         serial_proposal = serial.find('span', {'class':'_3mfro _2Wp8I PlM3e _2JVkc _2VHxz'})
         if serial_proposal:
             s = serial_proposal.getText().lower().replace(f'\xa00', f'0').replace(f'\xa0—\xa0', f'-').replace(f'\xa0', f' ').split(' ')
 
-            if s[0] == 'от':
-                jobs.loc[idx_pos, 'proposal_min'] = s[1]
-                jobs.loc[idx_pos, 'proposal_currency'] = s[2]
+            if s[0] == 'по':
+                pass
+            elif s[0] == 'от':
+                jobs.loc[idx_pos, 'proposal_min'] = int(s[1].replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[2])
             elif s[0] == 'до':
-                jobs.loc[idx_pos, 'proposal_max'] = s[1]
-                jobs.loc[idx_pos, 'proposal_currency'] = s[2]
+                jobs.loc[idx_pos, 'proposal_max'] = int(s[1].replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_currency'] = str([2])
 
             elif s[0].find('-') == -1:
-                jobs.loc[idx_pos, 'proposal_min'] = s[0]
-                jobs.loc[idx_pos, 'proposal_currency'] = s[1]
+                jobs.loc[idx_pos, 'proposal_min'] = int(s[0].replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[1])
             else:
-                jobs.loc[idx_pos, 'proposal_min'], jobs.loc[idx_pos, 'proposal_max'] = s[0].split('-')
+                a, b = s[0].split('-')
+                jobs.loc[idx_pos, 'proposal_min'] = int(a.replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_max'] = int(b.replace(f'\xa0', f''))
 
-                jobs.loc[idx_pos, 'proposal_currency'] = s[1]
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[1])
 
     print(idx)
     idx += 1
