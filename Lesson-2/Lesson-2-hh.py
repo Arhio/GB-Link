@@ -47,24 +47,24 @@ while idx < maxpos:
         idx_pos += 1
         serial_data = {}
         serial_info = serial.find('a')
-        jobs.loc[idx_pos, 'link'] = serial_info['href']
-        jobs.loc[idx_pos, 'name'] = serial_info.getText()
-        jobs.loc[idx_pos, 'main_link'] = main_link
+        jobs.loc[idx_pos, 'link'] = str(serial_info['href'])
+        jobs.loc[idx_pos, 'name'] = str(serial_info.getText())
+        jobs.loc[idx_pos, 'main_link'] = str(main_link)
         serial_side = serial.find('div', {'class':'vacancy-serp-item__sidebar'})
         serial_proposal = serial_side.find('span', {'class':'bloko-section-header-3'})
         if serial_proposal:
             s = serial_proposal.getText().lower().split(' ')
             if s[0] == 'от':
-                jobs.loc[idx_pos, 'proposal_min'] = s[1]
-
-                jobs.loc[idx_pos, 'proposal_currency'] = s[2].replace(f'\xa0', f'')
+                jobs.loc[idx_pos, 'proposal_min'] = int(s[1].replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[2])
             elif s[0] == 'до':
-                jobs.loc[idx_pos, 'proposal_max'] = s[1]
-                jobs.loc[idx_pos, 'proposal_currency'] = s[2].replace(f'\xa0', f'')
-
+                jobs.loc[idx_pos, 'proposal_max'] = int(s[1].replace(f'\xa0', f''))
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[2])
             else:
-                jobs.loc[idx_pos, 'proposal_min'], jobs.loc[idx_pos, 'proposal_max'] = s[0].replace(f'\xa0', f'').split('-')
-                jobs.loc[idx_pos, 'proposal_currency'] = s[1]
+                a, b = s[0].replace(f'\xa0', f'').split('-')
+                jobs.loc[idx_pos, 'proposal_min'] = int(a)
+                jobs.loc[idx_pos, 'proposal_max'] = int(b)
+                jobs.loc[idx_pos, 'proposal_currency'] = str(s[1])
 
     print(idx)
     idx += 1
