@@ -29,6 +29,8 @@ class LeroymerlinItem(scrapy.Item):
     specifications = scrapy.Field(input_processor=Join())
     link = scrapy.Field(output_processor=TakeFirst())
     price = scrapy.Field(output_processor=MapCompose(refactor_price))
+    search = scrapy.Field(output_processor=TakeFirst())
+    path = scrapy.Field(output_processor=TakeFirst())
 
     photos = scrapy.Field(input_processor=MapCompose(refactor_link))
 

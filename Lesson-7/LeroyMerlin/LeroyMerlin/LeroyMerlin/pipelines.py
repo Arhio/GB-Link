@@ -27,19 +27,17 @@ class LeroymerlinPipeline:
         return item
 
 class LeroymerlinPhotosPipeline(ImagesPipeline):
-
     def get_media_requests(self, item, info):
-        self.name = item['link'].split('/product/')[1][:-1]
+        path = item['path']
+        search = item['search']
+        m = f'{path}/{search}'
         if item['photos']:
             for img in item['photos']:
                 try:
-                    yield scrapy.Request(img)
+                    yield scrapy.Request( img, meta=item)
                 except Exception as e:
                     print(e)
 
-    # def file_path(self, request, response=None, info=None):
-    #
-    #     return 0
 
     def item_completed(self, results, item, info):
         if results:
@@ -47,5 +45,6 @@ class LeroymerlinPhotosPipeline(ImagesPipeline):
         return item
 
     def file_path(self, request, response=None, info=None):
-        path = f'{ self.crawler.spider.search }/{ self.name }/full/{ hashlib.sha1(to_bytes(request.url )).hexdigest() }.jpg'
+
+        path = f'{request.meta["search"]}/{request.meta["path"]}/full/{ hashlib.sha1(to_bytes(request.url )).hexdigest() }.jpg'
         return path

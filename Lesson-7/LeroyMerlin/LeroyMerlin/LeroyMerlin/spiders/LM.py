@@ -31,6 +31,8 @@ class LMSpider(scrapy.Spider):
         loader.add_value('specifications', ['|' + o for o in [str(p).replace('\n', '').strip() for p in response.xpath("//uc-pdp-section-vlimited/dl//text()").extract()] if o != ''])
         loader.add_value('link', response.url)
         loader.add_xpath('price', "//meta[@itemprop='price']/@content")
+        loader.add_value('search', self.search)
+        loader.add_value('path', response.url.split('/product/')[1][:-1])
 
         loader.add_xpath('photos', "//picture[@slot='pictures']/source[contains(@srcset, '2000')]/@srcset")
         yield loader.load_item()
