@@ -11,6 +11,13 @@ def refactor_link(value):
         return value #.upper()
 
 
+def refactor_price(value):
+    if value:
+        if len(value) > 0:
+            return float(value[0].strip().replace(',', '.'))
+        else:
+            return None
+
 def refactor_specifications(value):
     if value:
         return [o for o in [str(p).replace('\n', '').strip() for p in value] if o != '']
@@ -18,10 +25,10 @@ def refactor_specifications(value):
 class LeroymerlinItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field(output_processor=TakeFirst())
-    discription = scrapy.Field(output_processor=TakeFirst())
+    discription = scrapy.Field(output_processor=Join())
     specifications = scrapy.Field(input_processor=Join())
     link = scrapy.Field(output_processor=TakeFirst())
-    price = scrapy.Field(output_processor=TakeFirst())
+    price = scrapy.Field(output_processor=MapCompose(refactor_price))
 
     photos = scrapy.Field(input_processor=MapCompose(refactor_link))
 

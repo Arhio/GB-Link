@@ -10,8 +10,7 @@ class LMSpider(scrapy.Spider):
 
     def __init__(self,params):
         self.start_urls = [f'https://leroymerlin.ru/catalogue/{params[0]}?page=1']
-
-
+        self.search = params[0]
 
     def parse(self, response:HtmlResponse):
         items = response.xpath("//a[@slot='name']/@href").extract()
