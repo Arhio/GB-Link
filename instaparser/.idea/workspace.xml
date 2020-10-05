@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9334b588-2331-4a26-a04a-4a5cf8f23306" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lesson-2/.idea/Lesson-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lesson-7/.idea/Lesson-7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lesson-7/LeroyMerlin/.idea/LeroyMerlin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson-7/LeroyMerlin/LeroyMerlin/LeroyMerlin/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson-7/LeroyMerlin/LeroyMerlin/LeroyMerlin/pipelines.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1iPr2dzZvu027QBQjVZP80Bh9AJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Python.runner">
+    <configuration name="instagram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="instaparser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spiders/instagram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="instaparser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.runner" />
+        <item itemvalue="Python.instagram" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9334b588-2331-4a26-a04a-4a5cf8f23306" name="Default Changelist" comment="" />
+      <created>1601819861483</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601819861483</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1127" height="506" key="DebuggerActiveHint" timestamp="1601901577301">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1127" height="506" key="DebuggerActiveHint/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601901577301" />
+    <state width="912" height="340" key="GridCell.Tab.0.bottom" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.0.bottom/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.0.center" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.0.center/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.0.left" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.0.left/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.0.right" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.0.right/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.1.bottom" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.1.bottom/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.1.center" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.1.center/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.1.left" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.1.left/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+    <state width="912" height="340" key="GridCell.Tab.1.right" timestamp="1601903528558">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="912" height="340" key="GridCell.Tab.1.right/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1601903528558" />
+  </component>
+</project>
